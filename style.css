@@ -34,7 +34,7 @@ nav#navbar {
   top: 130%; /* Positions the logo's top edge at the bottom of the navbar */
   left: 10px; /* Adjust based on your design preference */
   height: 120px; /* Logo height */
-  width: 120px; /* Logo width */
+  width: auto; /* Logo width */
   border: 6px solid var(--background-color);
   border-radius: 50%;
   transform: translateY(-50%); /* Moves the logo up by half its height to overlap */
@@ -74,10 +74,7 @@ section {
 }
 
 section#welcome {
-  padding: 20px;
   text-align: center;
-  padding-left: 250px;
-  padding-right: 250px;
 }
 
 fieldset {
@@ -145,4 +142,76 @@ legend {
 
 .large-button:hover {
   background-color: #002D50; /* Darker shade on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1500px) {
+  #navbar-logo {
+    height: 0px; /* Logo height */
+    width: 0px; /* Logo width */
+    border: 0px solid var(--background-color);
+  }
+
+  section {
+    padding: 20px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  #navbar {
+      flex-direction: column;
+      text-align: center;
+  }
+  #navbar ul {
+      flex-direction: column;
+      text-align: center;
+  }
+  .button-container a.large-button, #navbar ul li a {
+      font-size: larger;
+  }
+  section {
+    padding: 20px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #navbar-logo {
+    height: 0px; /* Logo height */
+    width: 0px; /* Logo width */
+    border: 0px solid var(--background-color);
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2, h3, p {
+      padding: 0 20px; /* Adds padding on the sides for readability */
+      text-align: center;
+  }
+  .button-container {
+      text-align: center;
+  }
+  .button-container a.large-button {
+      width: 80%; /* Larger touch target */
+      padding: 12px;
+      margin: 0 auto; /* Center button */
+  }
+
+  section {
+    padding: 20px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #navbar-logo {
+    height: 0px; /* Logo height */
+    width: 0px; /* Logo width */
+    border: 0px solid var(--background-color);
+  }
 }
